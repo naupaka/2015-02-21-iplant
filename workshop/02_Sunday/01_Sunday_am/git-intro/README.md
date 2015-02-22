@@ -1,9 +1,9 @@
 
-# Git intro for INNGE workshop at INTECOL 2013
+# Git intro for Software Carpentry workshop at the University of Arizona
 
 Slides orginally created by Karthik Ram
 
-modified by Naupaka Zimmerman
+modified by Naupaka Zimmerman and others
 
 Question, comments, pull requests welcome.
 
