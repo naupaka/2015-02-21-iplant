@@ -1,5 +1,5 @@
 % Slides for Software Carpentry workshop at Tulane
-% January 2015 - New Orleans, LA
+% February 2015 - Tucson, AZ
 %
 % Original slides by: Karthik Ram, karthik.ram@gmail.com
 % Modified by: Naupaka Zimmerman, naupaka@gmail.com
@@ -92,7 +92,7 @@
 
 \title{Data Visualization Using R \& ggplot2}
 \author{Naupaka Zimmerman (@naupakaz) \linebreak Andrew Tredennick (@ATredennick) \linebreak \linebreak Hat tip to Karthik Ram (@\_inundata) for original slides \linebreak}
-\date{January 27, 2015}
+\date{February 22, 2015}
 \maketitle
 
 % --------------------------------------------------------------
@@ -1008,19 +1008,18 @@ See \texttt{?geom\_histogram} for list of options
 \begin{knitrout}\footnotesize
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlstd{climate} \hlkwb{<-} \hlkwd{read.csv}\hlstd{(}\hlstr{"../data/climate.csv"}\hlstd{,} \hlkwc{header} \hlstd{= T)}
-\end{alltt}
-
-
-{\ttfamily\noindent\color{warningcolor}{\#\# Warning in file(file, "{}rt"{}): cannot open file '../data/climate.csv': No such file or directory}}
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in file(file, "{}rt"{}): cannot open the connection}}\begin{alltt}
+\hlstd{climate} \hlkwb{<-} \hlkwd{read.csv}\hlstd{(}\hlstr{"data/climate.csv"}\hlstd{,} \hlkwc{header} \hlstd{= T)}
 \hlkwd{ggplot}\hlstd{(climate,} \hlkwd{aes}\hlstd{(Year, Anomaly10y))} \hlopt{+}
     \hlkwd{geom_line}\hlstd{()}
 \end{alltt}
+\end{kframe}
+
+{\centering \includegraphics[width=.75\linewidth]{figure/linea_-1} 
+
+}
 
 
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in ggplot(climate, aes(Year, Anomaly10y)): object 'climate' not found}}\end{kframe}
+
 \end{knitrout}
 \begin{flushright}
 \begingroup
@@ -1040,15 +1039,21 @@ We can also plot confidence regions
 \begin{knitrout}\footnotesize
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
+\hlstd{climate} \hlkwb{<-} \hlkwd{read.csv}\hlstd{(}\hlstr{"data/climate.csv"}\hlstd{,} \hlkwc{header} \hlstd{= T)}
 \hlkwd{ggplot}\hlstd{(climate,} \hlkwd{aes}\hlstd{(Year, Anomaly10y))} \hlopt{+}
     \hlkwd{geom_ribbon}\hlstd{(}\hlkwd{aes}\hlstd{(}\hlkwc{ymin} \hlstd{= Anomaly10y} \hlopt{-} \hlstd{Unc10y,}
         \hlkwc{ymax} \hlstd{= Anomaly10y} \hlopt{+} \hlstd{Unc10y),}
         \hlkwc{fill} \hlstd{=} \hlstr{"blue"}\hlstd{,} \hlkwc{alpha} \hlstd{=} \hlnum{.1}\hlstd{)} \hlopt{+}
     \hlkwd{geom_line}\hlstd{(}\hlkwc{color} \hlstd{=} \hlstr{"steelblue"}\hlstd{)}
 \end{alltt}
+\end{kframe}
+
+{\centering \includegraphics[width=.75\linewidth]{figure/lineb-1} 
+
+}
 
 
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in ggplot(climate, aes(Year, Anomaly10y)): object 'climate' not found}}\end{kframe}
+
 \end{knitrout}
 \end{frame}
 
@@ -1059,18 +1064,14 @@ We can also plot confidence regions
 \begin{itemize}
 \item Modify the previous plot and change it such that there are three lines instead of one with a confidence band.
 \begin{knitrout}\footnotesize
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+
+{\centering \includegraphics[width=.75\linewidth]{figure/ex2-1} 
+
+}
 
 
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in ggplot(climate, aes(Year, Anomaly10y)): object 'climate' not found}}
 
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in eval(expr, envir, enclos): object 'cplot' not found}}
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in eval(expr, envir, enclos): object 'cplot' not found}}
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in eval(expr, envir, enclos): object 'cplot' not found}}
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in eval(expr, envir, enclos): object 'cplot' not found}}\end{kframe}
 \end{knitrout}
 
 \end{itemize}
@@ -1191,14 +1192,14 @@ Using the d2 dataset you created earlier, generate this plot below. Take a quick
 \item Using the climate dataset, create a new variable called sign. Make it logical (true/false) based on the sign of Anomaly10y.
 \item Plot a bar plot and use \texttt{sign} variable as the fill.\\
 \begin{knitrout}\footnotesize
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+
+{\centering \includegraphics[width=.75\linewidth]{figure/ex4-1} 
+
+}
 
 
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in file(file, "{}rt"{}): cannot open the connection}}
 
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in ifelse(clim\$Anomaly10y < 0, FALSE, TRUE): object 'clim' not found}}
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in ggplot(clim, aes(Year, Anomaly10y)): object 'clim' not found}}\end{kframe}
 \end{knitrout}
 
 \end{itemize}
