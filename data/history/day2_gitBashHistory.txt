@@ -1,0 +1,125 @@
+ 2009  source ~/.bashrc
+ 2010  # testing
+ 2011  # This is working
+ 2012  # I promise
+ 2013  pwd
+ 2014  git init
+ 2015  ls
+ 2016  ls -a
+ 2017  git status
+ 2018  nano mars.txt
+ 2019  cat mars.txt 
+ 2020  git status
+ 2021  git add mars.txt 
+ 2022  git status
+ 2023  git
+ 2024  git commit
+ 2024  git commit
+ 2025  git status
+ 2026  git log
+ 2027  git status
+ 2028  cat mars.txt
+ 2029  git log
+ 2030  nano mars.txt 
+ 2031  git status
+ 2032  git diff
+ 2033  cat mars.txt 
+ 2034  git commit
+ 2035  git add mars.txt 
+ 2036  git status
+ 2037  git commit 
+ 2038  git log
+ 2039  cd ..
+ 2040  mkdir iplant_workshop
+ 2041  cd iplant_workshop/
+ 2042  ls ~/Downloads/Sunday_scripts.zip 
+ 2043  mv ~/Downloads/Sunday_scripts.zip .
+ 2044  ls
+ 2045  git init
+ 2046  ls
+ 2047  ls -a
+ 2048  pwd
+ 2049  git status
+ 2050  unzip Sunday_scripts.zip 
+ 2051  ls
+ 2052  git status
+ 2053  git add Sunday_scripts.zip 
+ 2054  git status
+ 2055  ls
+ 2056  git commit -m "Initially add script zip file"
+ 2057  git remote add origin git@github.com:strootman/iplant_workshop.git
+ 2058  git push -u origin master
+ 2058  git push -u origin master
+ 2058  git push -u origin master
+ 2059  git fetch
+ 2060  git status
+ 2061  git log
+ 2062  git pull
+ 2063  git log
+ 2064  git pull
+ 2065  ls
+ 2066  nano setupProject.sh 
+ 2067  bash setupProject.sh 
+ 2068  ls
+ 2069  ls data/
+ 2070  nano cleanData.sh 
+ 2071  git status
+ 2072  git add *.sh
+ 2073  git status
+ 2074  git commit -m "Extracted zip file and added scripts"
+ 2075  git status
+ 2076  ls
+ 2077  git add -A
+ 2078  git status
+ 2079  git commit -m "Ran the setup projects script"
+ 2080  git log
+ 2081  git log --oneline 
+ 2082  git status
+ 2083  ls
+ 2084  bash cleanData.sh 
+ 2085  git status
+ 2086  git diff
+ 2087  git status
+ 2088  git diff data/clean/China.cc.txt
+ 2089  git add data/clean/China.cc.txt data/clean/Guinea.cc.txt 
+ 2090  git status
+ 2091  git diff
+ 2092  git diff data/clean/China.cc.txt
+ 2093  git diff --staged data/clean/China.cc.txt
+ 2094  git status
+ 2095  git reset HEAD data/clean/China.cc.txt
+ 2096  git status
+ 2097  git add -a
+ 2098  git add .
+ 2099  git add -am
+ 2100  git status
+ 2101  git commit -m "Ran cleanup script"
+ 2102  git status
+ 2103  ls
+ 2104  nano combine.sh 
+ 2105  git status
+ 2106  git diff
+ 2107  bash combine.sh 
+ 2108  git status
+ 2109  ls output/
+ 2110  cat output/combined_gapMinder.tsv 
+ 2111  git status
+ 2112  git add output/combined_gapMinder.tsv 
+ 2113  git status
+ 2114  git commit -m "Ran combine script to generate big tsv"
+ 2115  git push
+ 2116  git log 
+ 2117  git log --oneline 
+ 2118  vim ~/.bash_aliases 
+ 2119  cd 
+ 2120  cd git/swcarpentry/workshops/2015-02-21-iplant/workshop/02_Sunday/
+ 2121  ls
+ 2122  ls 01_Sunday_am/
+ 2123  ls 01_Sunday_am/git-intro/
+ 2124  ls -a 01_Sunday_am/git-intro/
+ 2125  git pull
+ 2125  git pull
+ 2000  ls
+ 2001  vim .bashrc 
+ 2002  source .bashrc'
+ 2003  source .bashrc
